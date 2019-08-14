@@ -1,5 +1,5 @@
 function Plot_general(Theta,FM,yaw,pose,i)
-global ROV Sim
+global ROV 
 %% Função para plotar o barco com motores
 % i      -> Indice da coluna da matriz com os valores Theta e F para todos os motores
 % Theta  -> Matriz (ou Vetor) com os angulos de todos os motores
