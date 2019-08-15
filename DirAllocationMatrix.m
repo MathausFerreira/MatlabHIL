@@ -1,5 +1,5 @@
 function F = DirAllocationMatrix(PWM,Theta)
-%% alocação do barco
+%% Alocação de forças do barco
 global ROV;
 % Angulo dos braços do barco em relaçao ao centro
 phi = pi/4 ;
