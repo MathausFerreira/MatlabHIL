@@ -28,8 +28,9 @@ PhysicalProperties
 
 try
     fopen(s_port);
+    fprintf('PORTA USB CONECTADA!\n')
 catch exception
-    fprintf('PORTA USB NÂO CONECTADA!\n')
+    fprintf('PORTA USB NAO CONECTADA!\n')
 end
 flushinput(s_port);
 % t = tic;

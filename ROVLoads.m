@@ -5,7 +5,7 @@ function ROVLoads(stp)
 % Numero de amostras para o filtro
 N = 1;
 % Global variable(s)
-global Sim SimOutput_Plot Torque;
+global Sim SimOutput_Plot;
 
 % Converts forces and moments which stem from the weight force from the NED frame to the BF frame, where g = 9.80665 [m/s^2] is the accel. of gravity
 g_n = zeros(3,1);

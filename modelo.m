@@ -8,13 +8,7 @@ v_dot = ROV.InverseInertia * (Torque - Sim.NetForces);
 %% Double integration: accelerations -> velocities -> position/attitude
 X = [n_dot; v_dot]; % Vetor de Estados
 
-if(j==1)
-    Aux(:,j) =  Sim.Ts*X;
-    AuxVector = Aux(:,j);
-else
-    Aux(:,j) = Sim.Ts*X;
-    AuxVector = (Aux(:,j-1) + 2*(Aux(:,j-1)+Aux(:,j)) + Aux(:,j))/6;
-end
+AuxVector = Integra_modelo(X,j);
 
 AuxVector = [Sim.Current_X_Y_psi;Sim.Current_u_v_r] + AuxVector;
 AuxVector(3) = rem(AuxVector(3),2*pi);
